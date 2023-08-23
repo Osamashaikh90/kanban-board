@@ -1,0 +1,66 @@
+.navbar {
+    /* padding:  1rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+        padding: 10px;
+        background-color:rgb(218, 59, 59);
+        color: #050404;
+        gap: 10px;
+        height: 60px;
+}
+
+.display-section {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+.icon {
+    font-size: 1rem;
+    margin:0 5px;
+    transform: rotate(90deg);
+}
+.icon-1{
+    font-size: 0.9rem;
+    margin:0 5px;
+}
+.select-text{
+    font-weight: 600;
+}
+ label {
+     margin-right: 2px;
+ }
+
+ select {
+     padding: 5px;
+     width: 100%;
+     border-radius: 3px;
+     user-select: none;
+ }
+ button{
+    position: relative;
+background-color: white;
+font-size: 0.9rem;
+font-weight: 500;
+border-radius: 5px;
+padding: 5px 10px;
+display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgb(49, 49, 49);
+}
+
+.display-card{
+position: absolute;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding: 10px;
+background-color: white;
+border-radius: 0.6rem;
+margin-top: 9rem;
+z-index: 10;
+
+}

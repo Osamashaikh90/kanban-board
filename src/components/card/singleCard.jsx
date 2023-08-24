@@ -1,6 +1,5 @@
 import React from "react";
-import { PiWarningCircleFill } from "react-icons/pi";
-import { BsFillCircleFill } from "react-icons/bs";
+import { BsFillCircleFill, BsFillExclamationSquareFill } from "react-icons/bs";
 import "./SingleCard.css";
 const SingleCard = ({ id, title, tag }) => {
   return (
@@ -26,7 +25,7 @@ const SingleCard = ({ id, title, tag }) => {
         <div className="tag">
           <div className="sub-tag">
             <span style={{ color: "#525252" }}>
-              <PiWarningCircleFill />
+              <BsFillExclamationSquareFill />
             </span>
           </div>
           <div className="sub-tag">

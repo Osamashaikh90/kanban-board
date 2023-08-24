@@ -1,12 +1,18 @@
 import Navbar from "./components/navigation/Navbar";
 import Dashboard from "./pages/Dashboard";
+import { CardProvider } from "./context/cardContext";
+import { SelectedCardProvider } from "./context/selectedCardContext";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Dashboard />
+      <CardProvider>
+        <SelectedCardProvider>
+          <Navbar />
+          <Dashboard />
+        </SelectedCardProvider>
+      </CardProvider>
     </>
   );
 }

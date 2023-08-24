@@ -1,13 +1,10 @@
 import React from "react";
-import { useCardContext } from "../../context/cardContext";
 import SingleCard from "./singleCard";
 
-const CardList = () => {
-  const { cards } = useCardContext;
+const CardList = ({ id, title, tag }) => {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
-      <SingleCard />
-      <SingleCard />
+      <SingleCard id={id} title={title} tag={tag} />
     </div>
   );
 };

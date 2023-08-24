@@ -9,24 +9,25 @@ width: 100%;
 height: auto;
 display: flex;
     /* justify-content: center; */
+
     align-items: center;
     flex-direction: column;
     gap: 10px ;
 }
 
-.card-container>* {
-    width: 100%;
-}
+
 .card-heading{
     display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
 }
 
 .profile{
 position: relative;
 width: 30px;
  height: 30px;
+ 
 }
 
 .profile-pic{
@@ -39,6 +40,7 @@ border-radius: 50%;
     display: flex;
     align-items: center;
     column-gap: 5px;
+    width: 100%;
     gap: 5px;
 }
 
@@ -54,12 +56,17 @@ height: 18px;
 width: 18px;
 }
 
-.status{
+.statusDot{
 position: absolute;
     right: 0;
     bottom: 0;
-    width: 10px;
-    height: 10px;
     background: rgb(179, 178, 178);
     border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    
+}
+
+.card-title{
+width:100%
 }

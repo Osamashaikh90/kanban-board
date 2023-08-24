@@ -1,4 +1,4 @@
-import Navbar from "./components/navigation/Navbar";
+import Navbar from "./components/navigationBar/Navbar";
 import Dashboard from "./pages/Dashboard";
 import { CardProvider } from "./context/cardContext";
 import { SelectedCardProvider } from "./context/selectedCardContext";

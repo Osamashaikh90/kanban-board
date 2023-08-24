@@ -5,7 +5,8 @@ import SingleCard from "./singleCard";
 const CardList = () => {
   const { cards } = useCardContext;
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
+      <SingleCard />
       <SingleCard />
     </div>
   );

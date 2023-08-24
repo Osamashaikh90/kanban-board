@@ -28,7 +28,7 @@ const SelectedCardProvider = ({ children }) => {
 
         cardData.forEach((currElem, index) => {
           let arr = allCards.filter((currEelem) => {
-            return currEelem === currEelem.status;
+            return currElem === currEelem.status;
           });
           selectedData.push({
             [index]: {
@@ -39,8 +39,9 @@ const SelectedCardProvider = ({ children }) => {
         });
       } else if (groupingCards === "user") {
         showProfile = true;
-        allCards?.allUser?.forEach((elem, index) => {
-          cardData = allCards?.allTickets?.filter((currEelem) => {
+        console.log(allCards);
+        allCards?.users?.forEach((elem, index) => {
+          cardData = allCards?.tickets?.filter((currEelem) => {
             return elem.id === currEelem.userId;
           });
 
@@ -79,7 +80,7 @@ const SelectedCardProvider = ({ children }) => {
           elem[index]?.value?.sort((a, b) => b.priority - a.priority);
         });
       }
-      console.log(selectedData);
+
       dispatch({
         type: "SET_SELECTED_CARDS",
         payload: { selectedData, showProfile },

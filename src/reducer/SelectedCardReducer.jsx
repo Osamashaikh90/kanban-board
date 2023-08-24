@@ -10,6 +10,7 @@ const SelectedCardReducer = (state, action) => {
         ...state,
         isLoading: false,
         selectCards: action.payload.selectedData,
+        user: action.payload.showProfile,
       };
     case "API_ERROR":
       return {

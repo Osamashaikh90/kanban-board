@@ -15,10 +15,10 @@ const Navbar = () => {
           </button>
           {display && (
             <div className="display-card">
-              <div style={{ display: "flex", gap: "4rem" }}>
+              <div style={{ display: "flex", gap: "4rem", padding: "3px" }}>
                 <label style={{ width: "100%" }}>Grouping</label>
                 <select className="select-text">
-                  <option value="status">Display</option>
+                  <option value="status">Status</option>
                   <option value="user">User</option>
                   <option value="priority">Priority</option>
                 </select>

@@ -3,47 +3,57 @@ import CardList from "../components/card/cardList";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
 import { PiDotsThreeBold } from "react-icons/pi";
-import { useCardContext } from "../context/cardContext";
+
 import "./Dashboard.css";
-import { useEffect } from "react";
+
 import { useSelectedCardsContext } from "../context/selectedCardContext";
 const Dashboard = () => {
-  const { cards } = useCardContext();
-  const { selectedCards, selectCards } = useSelectedCardsContext();
-  console.log(cards);
-  useEffect(() => {
-    selectedCards("status", cards.tickets, "title");
-    console.log(selectCards);
-    console.log(cards);
-  }, [cards]);
+  const { selectCards, user } = useSelectedCardsContext();
+
   return (
-    <>
+    selectCards && (
       <div className="dashboard-container">
-        <div className="inner-container">
-          <div className="dashboard-heading ">
-            <div className="left" style={{ display: "flex", columnGap: "5px" }}>
-              <BsPencilSquare />
-              <div className="dashboard-profile">
-                <img
-                  className="dashboard-profile-pic"
-                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
-                  alt="profile"
-                />
+        {selectCards.map((curElem, index) => (
+          <div key={index} className="inner-container">
+            <div className="dashboard-heading ">
+              <div
+                className="left"
+                style={{ display: "flex", columnGap: "5px" }}
+              >
+                {!user ? (
+                  <BsPencilSquare />
+                ) : (
+                  <>
+                    <div className="dashboard-profile">
+                      <img
+                        className="dashboard-profile-pic"
+                        src="https://i.imgur.com/Aw5z2TF.png"
+                        alt="profile"
+                      />
+                    </div>
+                  </>
+                )}
+                <span style={{ fontWeight: "500" }}>
+                  {curElem[index]?.title} {curElem[index]?.value?.length}
+                </span>
               </div>
-              <span style={{ fontWeight: "500" }}>Osama</span>
+              <div
+                className="right"
+                style={{ display: "flex", columnGap: "5px" }}
+              >
+                <AiOutlinePlus />
+                <PiDotsThreeBold />
+              </div>
             </div>
-            <div
-              className="right"
-              style={{ display: "flex", columnGap: "5px" }}
-            >
-              <AiOutlinePlus />
-              <PiDotsThreeBold />
-            </div>
+            {curElem[index]?.value?.map((elem, i) => {
+              return (
+                <CardList id={elem.id} title={elem.title} tag={elem.tag} />
+              );
+            })}
           </div>
-          <CardList />
-        </div>
+        ))}
       </div>
-    </>
+    )
   );
 };
 

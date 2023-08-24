@@ -36,7 +36,7 @@
 
  select {
      padding: 5px;
-     width: 100%;
+     width: 160px;
      border-radius: 3px;
      user-select: none;
      border: 1px solid #dbdcdc;
@@ -53,6 +53,7 @@ display: flex;
     align-items: center;
     border: 1px solid rgb(176, 175, 175);
 box-shadow: #5254564d 0px 1px 2px 0px, #3c404326 0px 1px 3px 1px;
+cursor: pointer;
 }
 
 .display-card{
@@ -66,6 +67,12 @@ border-radius: 0.6rem;
 margin-top: 9rem;
 z-index: 10;
 border: 1px solid #ECEDEF;
-box-shadow: #EBECED 0px 1px 2px 0px,#eaeaea 0px 1px 3px 1px;
+box-shadow: #c1c1c1 0px 1px 2px 0px,#adadad65 0px 1px 3px 1px;
 
+}
+.display{
+display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px;
 }

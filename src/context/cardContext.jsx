@@ -11,10 +11,10 @@ const initialState = {
 };
 const CardProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cardReducer, initialState);
-  const getCards = async (url) => {
+  const getCards = async (api_url) => {
     dispatch({ type: "SET_LOADING" });
     try {
-      const res = await axios.get(url);
+      const res = await axios.get(api_url); //Abstraction of business logic
       const cards = await res.data;
       console.log(cards);
       dispatch({ type: "SET_SINGLE_CARD", payload: cards });
